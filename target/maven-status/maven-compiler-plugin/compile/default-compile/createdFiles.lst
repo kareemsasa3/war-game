@@ -1,8 +1,8 @@
-main/TableController.class
 game/Rank.class
+main/TableController.class
 game/Deck.class
 game/Suit.class
 game/Card.class
 game/War.class
-main/Main.class
 game/Hand.class
+main/Main.class

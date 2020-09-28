@@ -5,6 +5,7 @@ public class War {
     public static final int numberOfPlayers = 2;
 	public static final String[] playerNames = {"Sally", "Zorbo", "Kareem"};
     public static final int cardsPerPlayer = cardsInDeck / numberOfPlayers;
+    public static final int maxRounds = 20;
    
     public Deck deck;
     public static Hand[] players;
@@ -20,9 +21,18 @@ public class War {
     }
 
     public void beginGame() {
-        printPlayersCards();
 
-        if (!this.war) {
+        for(int x = 0; x < maxRounds; x++ ){
+            printPlayersCards();
+            if (!this.war) {
+
+            }
+
+
+        }
+
+
+
             for (int i = 0; i < numberOfPlayers; i++) {
                 if (players[i].getNumberOfCards() > 0) {
                     playCard(players[i], i);
@@ -32,7 +42,7 @@ public class War {
                     break;
                 }
             }
-        }
+
         // insert comparison here
         for (int i = 0; i < numberOfPlayers-1; i++) {
             if (playedCards.getCards().get(i).compareTo(playedCards.getCards().get(i+1)) == 1) {
