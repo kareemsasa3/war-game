@@ -19,12 +19,12 @@ public class Hand {
         this.setNumberOfCards();
     }
 
-    public boolean give(Card card, Hand currentlyPlayed) {
-        if (!cards.contains(card)) return false;
+    public Card give(Card card, Hand currentlyPlayed) {
+        if (!cards.contains(card)) return null;
         else {
             cards.remove(card);
             currentlyPlayed.add(card);
-            return true;
+            return card;
         }
     }
 
