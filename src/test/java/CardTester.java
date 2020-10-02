@@ -1,4 +1,6 @@
-import game.*;
+import game.Card;
+import game.Rank;
+import game.Suit;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

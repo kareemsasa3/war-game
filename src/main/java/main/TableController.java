@@ -13,13 +13,17 @@ public class TableController {
     @FXML
     private Button playWar;
 
+    private War war;
 
     public TableController() {
     }
 
     @FXML
     void playWar(ActionEvent event) {
-        War war = new War();
+        int numberOfCards = 20;
+        int numberOfPlayers = 2;
+        int cardsPerPlayer = numberOfCards / numberOfPlayers;
+        war = new War(numberOfPlayers, cardsPerPlayer);
         war.beginGame();
     }
 
