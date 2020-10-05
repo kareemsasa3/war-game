@@ -20,7 +20,10 @@ public class TableController {
     @FXML
     void playWar(ActionEvent event) {
         War war = new War();
-        war.beginGame();
+        //Game variation 1
+        //war.beginGameSamePile();
+        //Game variation 2
+        war.beginGameNewPile();
     }
 
     @FXML
