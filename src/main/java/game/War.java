@@ -1,7 +1,7 @@
 package game;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
+
 
 public class War {
     public static final int cardsInDeck = 52;
@@ -61,9 +61,7 @@ public class War {
                         winnerPile.getCards().add(toBeAdded);
                     }
                     while (war == true) {
-                        LinkedHashMap<Card, Integer> warComparison = new LinkedHashMap<Card, Integer>();
-                        Hand cardWarComparision = new Hand();
-                        int notEnoughCardsCount = 0;
+                        currentRoundHand = new Hand();
                         for (int z = 0; z < players.length; z++) {
                             if (players[z].getNumberOfCards() < cardsToDraw) {
                                 if (players.length == 2) {
@@ -74,17 +72,6 @@ public class War {
                                         System.out.println("Winner is" + playerNames[0] + "!");
                                         return;
                                     }
-                                } else {
-                                    notEnoughCardsCount++;
-                                    if (notEnoughCardsCount == 2) {
-                                        for (int t = 0; t < players.length; t++) {
-                                            if (players[t].getNumberOfCards() >= cardsToDraw) {
-                                                System.out.println("Winner is" + playerNames[t] + "!");
-                                                return;
-                                            }
-                                        }
-                                    }
-
                                 }
                             } else {
                                 for (int i = 0; i < cardsToDraw - 1; i++) {
@@ -94,22 +81,19 @@ public class War {
                                 }
                                 Card toBeAdded = playCard(players[z], z);
                                 System.out.println(playerNames[z] + " plays " + toBeAdded.toString());
+                                currentRoundHand.getCards().add(toBeAdded);
                                 winnerPile.getCards().add(toBeAdded);
-                                warComparison.put(toBeAdded, z);
-                                cardWarComparision.add(toBeAdded);
-
                             }
                         }
-                            int winner = getRoundWinner(cardWarComparision);
+                            int winner = getRoundWinner(currentRoundHand);
                             if (winner == -1) {
                                 cardsToDraw = cardsToDraw * 2;
 
                             } else {
-                                int winnerOfRound = warComparison.get(cardWarComparision.getCards().get(winner));
-                                System.out.print(winnerOfRound);
-                                System.out.println(playerNames[winnerOfRound] + " wins the round!");
+                                System.out.print(winner);
+                                System.out.println(playerNames[winner] + " wins the round!");
                                 for (int i = winnerPile.getNumberOfCards() - 1; i >= 0; i--) {
-                                    winnerPile.give(winnerPile.getCards().get(i), players[winnerOfRound]);
+                                    winnerPile.give(winnerPile.getCards().get(i), players[winner]);
                                 }
                                 this.setWar(false);
                             }
@@ -144,6 +128,7 @@ public class War {
         System.out.println(players[1].getCards().toString());
         return;
     }
+
     public void beginGameNewPile() {
         war = false;
         playerPointsPileHands = new ArrayList<Hand>();
@@ -180,8 +165,7 @@ public class War {
                     winnerPile.getCards().add(toBeAdded);
                 }
                 while (war == true) {
-                    Hand cardWarComparision = new Hand();
-                    int notEnoughCardsCount = 0;
+                    currentRoundHand = new Hand();
                     for (int z = 0; z < players.length; z++) {
                         if (players[z].getNumberOfCards() < cardsToDraw) {
                             int winner = getWinner(playerPointsPileHands);
@@ -201,11 +185,12 @@ public class War {
                             }
                             Card toBeAdded = playCard(players[z], z);
                             System.out.println(playerNames[z] + " plays " + toBeAdded.toString());
+                            currentRoundHand.getCards().add(toBeAdded);
                             winnerPile.getCards().add(toBeAdded);
-                            cardWarComparision.add(toBeAdded);
+
                         }
                     }
-                    int winner = getRoundWinner(cardWarComparision);
+                    int winner = getRoundWinner(currentRoundHand);
                     if (winner == -1) {
                         cardsToDraw = cardsToDraw * 2;
                     }else {
