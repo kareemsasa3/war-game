@@ -20,11 +20,11 @@ public class TableController {
 
     @FXML
     void playWar(ActionEvent event) {
-        int numberOfCards = 20;
-        int numberOfPlayers = 2;
-        int cardsPerPlayer = numberOfCards / numberOfPlayers;
-        war = new War(numberOfPlayers, cardsPerPlayer);
-        war.beginGame();
+        war = new War();
+        // variation 1
+        war.beginGameSamePile();
+        // variation 2
+        //war.beginGameNewPile();
     }
 
     @FXML
