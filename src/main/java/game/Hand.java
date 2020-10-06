@@ -20,7 +20,7 @@ public class Hand {
     }
 
     public Card give(Card card, Hand currentlyPlayed) {
-        if (!cards.contains(card)) return;
+        if (!cards.contains(card)) return null;
         else {
             cards.remove(card);
             currentlyPlayed.add(card);
