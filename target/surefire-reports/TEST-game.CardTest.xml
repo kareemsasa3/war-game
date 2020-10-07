@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="game.CardTest" time="0.021" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="game.CardTest" time="0.045" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.8+10-post-Ubuntu-0ubuntu120.04"/>
@@ -61,8 +61,8 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="game.CardTest" name="testToString" time="0.019"/>
-  <testcase classname="game.CardTest" name="testGetRank" time="0.002"/>
-  <testcase classname="game.CardTest" name="testGetSuit" time="0"/>
+  <testcase classname="game.CardTest" name="testToString" time="0.044"/>
+  <testcase classname="game.CardTest" name="testGetRank" time="0"/>
+  <testcase classname="game.CardTest" name="testGetSuit" time="0.001"/>
   <testcase classname="game.CardTest" name="testEquals" time="0"/>
 </testsuite>
