@@ -6,13 +6,13 @@ Make sure Maven is installed on your computer
 You can run this project from this directory by typing:
 ```mvn package javafx:run```
 
-####Domain Models:  
+<b>Domain Models:</b>  
 - War  
 - Hand  
 - Card  
 - Deck  
 
-####Implemented GRASP Patterns:  
+<b>Implemented GRASP Patterns:</b>  
 - High Cohesion:  
 When designing the project structure, we started with the basics.  
 For War to work, we would have to implement a Card and Hand object.  
@@ -30,14 +30,14 @@ In the main package exists TableController.java, which responds to user input ev
 Currently, the only user input that involves a response in clicking on the beginGame button  
 which simulates an entire copy of War with variation selected within the TableController.
 
-####Implemented SOLID Principles:
+<b>Implemented SOLID Principles:</b>
 
 - Liskov Substitution  
 The War class implements several Hand objects, which is defined simply as ArrayList<Card>.  
 This means that the current design correctly implements each dedined object already through  
 a series of layers.
 
-####Project Bugs
+<b>Project Bugs</b>
 - Game variation 1 - Placing cards in bottom of players' hands 
     - When war starts, duplicate hands are added the winner player's deck, causing greater than 52 cards total between the two players at the end of the game
 - Game variation 2 - 2 player OR 3 player 
