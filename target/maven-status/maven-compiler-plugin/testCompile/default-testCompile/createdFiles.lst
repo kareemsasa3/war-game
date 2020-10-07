@@ -1,2 +1,4 @@
-CardTester.class
-DeckTester.class
+game/DeckTest.class
+game/HandTest.class
+game/WarTest.class
+game/CardTest.class
