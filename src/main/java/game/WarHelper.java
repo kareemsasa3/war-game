@@ -10,7 +10,7 @@ public class WarHelper {
         int playerIndex = 0;
         while (playerIndex < numberOfPlayers) {
             if (players[playerIndex].getNumberOfCards() == cardsInDeck) {
-                out.println("Winner is " + playerNames[playerIndex]);
+                output = output + "Winner is " + playerNames[playerIndex] + "\n";
                 return null;
             }
             if (players[playerIndex].getNumberOfCards() > 0) playCards(playerIndex, currentRoundHand);
@@ -25,7 +25,7 @@ public class WarHelper {
             if (players[playerIndex].getNumberOfCards() > 0) playCards(playerIndex, currentRoundHand);
             else {
                 int winner = getWinner(playerPointsPileHands);
-                out.println("Winner is " + playerNames[winner]);
+                output = output + "Winner is " + playerNames[winner] + "\n";
                 return null;
             }
             playerIndex++;
@@ -37,10 +37,10 @@ public class WarHelper {
         int maxInd = -1;
         int maxVal = -1;
         if (players.length == 2 && players[0].getNumberOfCards() == 26) {
-            out.println("It's a Tie!");
+            output = output + "It's a Tie!" + "\n";
             return;
         } else if (players.length == 3 && players[0].getNumberOfCards() == 17) {
-            out.println("It's a Tie!");
+            output = output + "It's a Tie!" + "\n";
             return;
         }
         int playerIndex = 0;
@@ -49,18 +49,18 @@ public class WarHelper {
                 maxVal = players[playerIndex].getNumberOfCards();
                 maxInd = playerIndex;
             }
-            out.println(players[playerIndex].getNumberOfCards());
+            output = output + players[playerIndex].getNumberOfCards() + "\n";
             playerIndex++;
         }
-        out.println("Winner is " + playerNames[maxInd] + "!");
-        out.println(players[0].getCards().toString());
-        out.println(players[1].getCards().toString());
+        output = output + "Winner is " + playerNames[maxInd] + "!\n";
+        output = output + players[0].getCards().toString();
+        output = output + players[1].getCards().toString();
     }
 
     public static void getWinnerNewPile() {
         int winner = getWinner(playerPointsPileHands);
-        if (winner == -1) out.println("It's a tie!");
-        else out.println("Winner is " + playerNames[winner] + "!");
+        if (winner == -1) output = output + "It's a tie!\n";
+        else output = output + "Winner is " + playerNames[winner] + "!\n";
     }
 
     public static int getWinner(ArrayList<Hand> playerPointsPlies){
@@ -96,7 +96,7 @@ public class WarHelper {
     public static void givePile(int playerIndex, int cardsToDraw, Hand currentRoundHand, Hand winnerPile) {
         for (int i = 0; i < cardsToDraw - 1; i++) playCards(playerIndex, winnerPile);
         Card toBeAdded = playCard(players[playerIndex]);
-        out.println(playerNames[playerIndex] + " plays " + toBeAdded.toString());
+        output = output + playerNames[playerIndex] + " plays " + toBeAdded.toString() + "\n";
         currentRoundHand.getCards().add(toBeAdded);
         winnerPile.getCards().add(toBeAdded);
     }
@@ -104,18 +104,18 @@ public class WarHelper {
     public static void playCards(int playerIndex, Hand hand) {
         Card toBeAdded = playCard(players[playerIndex]);
         hand.getCards().add(playerIndex, toBeAdded);
-        out.println(playerNames[playerIndex] + " plays " + hand.getCards().get(playerIndex).toString());
+        output = output + playerNames[playerIndex] + " plays " + hand.getCards().get(playerIndex).toString() + "\n";
     }
 
     public static void declareOpponentWinner(int playerIndex) {
-        if (playerIndex == 0) out.println("Winner is" + playerNames[1] + "!");
-        else out.println("Winner is" + playerNames[0] + "!");
+        if (playerIndex == 0) output = output + "Winner is" + playerNames[1] + "!\n";
+        else output = output + "Winner is" + playerNames[0] + "!\n";
     }
 
     public static void declareWinner() {
         int winner = getWinner(playerPointsPileHands);
-        if(winner == -1) out.println("It's a tie!");
-        else out.println("Winner is" + playerNames[winner] + "!");
+        if(winner == -1) output = output + "It's a tie!\n";
+        else output = output + "Winner is" + playerNames[winner] + "!\n";
     }
 
     public static Card playCard(Hand player) {

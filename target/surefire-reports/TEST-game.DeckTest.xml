@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="game.DeckTest" time="0.018" errors="1" skipped="0">
+<testsuite tests="1" failures="0" name="game.DeckTest" time="0.016" errors="1" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="14.0.1+14"/>
@@ -57,7 +57,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="game.DeckTest" name="testPopulate" time="0.018">
+  <testcase classname="game.DeckTest" name="testPopulate" time="0.016">
     <error message="expectedDeck.txt (No such file or directory)" type="java.io.FileNotFoundException">java.io.FileNotFoundException: expectedDeck.txt (No such file or directory)
 	at java.base/java.io.FileInputStream.open0(Native Method)
 	at java.base/java.io.FileInputStream.open(FileInputStream.java:212)

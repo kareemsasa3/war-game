@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 /Users/tiffanytabourne/Desktop/Fall 2020 - Courses/Object Oriented Systems/Assignment2/war-game/src/test/java/game/DeckTest.java
 /Users/tiffanytabourne/Desktop/Fall 2020 - Courses/Object Oriented Systems/Assignment2/war-game/src/test/java/game/HandTest.java
 /Users/tiffanytabourne/Desktop/Fall 2020 - Courses/Object Oriented Systems/Assignment2/war-game/src/test/java/game/WarTest.java
 /Users/tiffanytabourne/Desktop/Fall 2020 - Courses/Object Oriented Systems/Assignment2/war-game/src/test/java/game/CardTest.java
-=======
-/home/kareem/Code/Java/war-game/src/test/java/game/CardTest.java
-/home/kareem/Code/Java/war-game/src/test/java/game/DeckTest.java
-/home/kareem/Code/Java/war-game/src/test/java/game/HandTest.java
-/home/kareem/Code/Java/war-game/src/test/java/game/WarTest.java
->>>>>>> 7a959858673ac30f05ec84109ec8d5f8ee5107a4

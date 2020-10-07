@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: game.DeckTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.021 sec <<< FAILURE!
-testPopulate(game.DeckTest)  Time elapsed: 0.018 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.019 sec <<< FAILURE!
+testPopulate(game.DeckTest)  Time elapsed: 0.016 sec  <<< ERROR!
 java.io.FileNotFoundException: expectedDeck.txt (No such file or directory)
 	at java.base/java.io.FileInputStream.open0(Native Method)
 	at java.base/java.io.FileInputStream.open(FileInputStream.java:212)

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="game.CardTest" time="0.016" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="game.CardTest" time="0.015" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="14.0.1+14"/>
@@ -57,7 +57,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="game.CardTest" name="testToString" time="0.016"/>
+  <testcase classname="game.CardTest" name="testToString" time="0.015"/>
   <testcase classname="game.CardTest" name="testGetRank" time="0"/>
   <testcase classname="game.CardTest" name="testGetSuit" time="0"/>
   <testcase classname="game.CardTest" name="testEquals" time="0"/>
