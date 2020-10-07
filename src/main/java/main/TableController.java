@@ -15,6 +15,8 @@ public class TableController {
 
     private War war;
 
+    private String output;
+
     public TableController() {
     }
 
@@ -22,9 +24,10 @@ public class TableController {
     void playWar(ActionEvent event) {
         war = new War();
         // variation 1
-        war.beginGameSamePile();
+        output = war.beginGameSamePile();
         // variation 2
-        //war.beginGameNewPile();
+        //output = war.beginGameNewPile();
+        gameOutput.appendText(output);
     }
 
     @FXML

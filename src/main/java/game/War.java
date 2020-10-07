@@ -1,6 +1,9 @@
 //War.java
 package game;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+
 import java.util.ArrayList;
 
 import static game.WarHelper.*;
@@ -19,6 +22,7 @@ public class War {
     public static final String[] playerNames = {"Sally", "Zorbo", "Kareem"};
     public static final int cardsPerPlayer = cardsInDeck / numberOfPlayers;
     public static final int maxRounds = 20;
+    public static String output;
 
     public Deck deck;
     public static Hand[] players;
@@ -34,7 +38,7 @@ public class War {
         this.setWar(false);
     }
 
-    public void beginGameSamePile() {
+    public String beginGameSamePile() {
         int currentRound = 0;
         while (currentRound < maxRounds) {
             Hand currentRoundHand = new Hand();
@@ -43,14 +47,15 @@ public class War {
             if (winnerIndex == -1) simulateWar(currentRoundHand, 1);
             else {
                 giveWinnerPlayedCards(players[winnerIndex]);
-                out.println(playerNames[winnerIndex] + " wins the round!");
+                output = output + playerNames[winnerIndex] + " wins the round!\n";
             }
             currentRound++;
         }
         getWinnerSamePile();
+        return output;
     }
 
-    public void beginGameNewPile() {
+    public String beginGameNewPile() {
         playerPointsPileHands = new ArrayList<>();
         for (int x = 0; x < numberOfPlayers; x++) playerPointsPileHands.add(new Hand());
         while(players[0].getNumberOfCards() != 0){
@@ -59,13 +64,14 @@ public class War {
             int winnerIndex = getRoundWinner(currentRoundHand);
             if (winnerIndex == -1) simulateWar(currentRoundHand, 2);
             else {
-                out.println(playerPointsPileHands.get(winnerIndex).getNumberOfCards());
+                output = output + playerPointsPileHands.get(winnerIndex).getNumberOfCards() + "\n";
                 giveWinnerToPointsPile(playerPointsPileHands.get(winnerIndex),currentRoundHand);
-                out.println(playerPointsPileHands.get(winnerIndex).getNumberOfCards());
-                out.println(playerNames[winnerIndex] + " wins the round!");
+                output = output + playerPointsPileHands.get(winnerIndex).getNumberOfCards() + "\n";
+                output = output + playerNames[winnerIndex] + " wins the round!" + "\n";
             }
         }
         getWinnerNewPile();
+        return output;
     }
 
     public void simulateWar(Hand currentRoundHand, int variation) {
@@ -90,7 +96,7 @@ public class War {
 
     public int checkDraw(int winner, Hand winnerPile, int cardsToDraw) {
         if (winner != -1) {
-            out.println(playerNames[winner] + " wins the round!");
+            output = output + playerNames[winner] + " wins the round!" + "\n";
             for (int i = winnerPile.getNumberOfCards() - 1; i >= 0; i--)
                 winnerPile.give(winnerPile.getCards().get(i), players[winner]);
             this.setWar(false);
@@ -101,7 +107,7 @@ public class War {
     }
 
     public Hand initiateWar(Hand currentRoundHand) {
-        out.println("*** WAR!!! ***");
+        output = output + "*** WAR!!! ***" + "\n";
         this.setWar(true);
         Hand winnerPile = new Hand();
         for (int z = 0; z < currentRoundHand.getNumberOfCards(); z++) {
