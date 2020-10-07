@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="game.DeckTest" time="0.004" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="game.DeckTest" time="0.008" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.8+10-post-Ubuntu-0ubuntu120.04"/>
@@ -61,8 +61,8 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="game.DeckTest" name="testDeal" time="0"/>
+  <testcase classname="game.DeckTest" name="testDeal" time="0.006"/>
   <testcase classname="game.DeckTest" name="testTestDeal" time="0.001"/>
-  <testcase classname="game.DeckTest" name="testPopulate" time="0.002"/>
-  <testcase classname="game.DeckTest" name="testShuffle" time="0.001"/>
+  <testcase classname="game.DeckTest" name="testPopulate" time="0.001"/>
+  <testcase classname="game.DeckTest" name="testShuffle" time="0"/>
 </testsuite>

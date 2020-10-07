@@ -22,9 +22,9 @@ public class TableController {
     void playWar(ActionEvent event) {
         war = new War();
         // variation 1
-        war.beginGameSamePile();
+        //war.beginGameSamePile();
         // variation 2
-        //war.beginGameNewPile();
+        war.beginGameNewPile();
     }
 
     @FXML
