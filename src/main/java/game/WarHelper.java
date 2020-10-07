@@ -53,8 +53,7 @@ public class WarHelper {
             playerIndex++;
         }
         output = output + "Winner is " + playerNames[maxInd] + "!\n";
-        output = output + players[0].getCards().toString();
-        output = output + players[1].getCards().toString();
+
     }
 
     public static void getWinnerNewPile() {

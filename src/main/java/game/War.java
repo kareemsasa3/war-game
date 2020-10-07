@@ -40,6 +40,7 @@ public class War {
 
     public String beginGameSamePile() {
         int currentRound = 0;
+        output = "";
         while (currentRound < maxRounds) {
             Hand currentRoundHand = new Hand();
             currentRoundHand = initiateRoundSamePile(currentRoundHand);
@@ -56,6 +57,7 @@ public class War {
     }
 
     public String beginGameNewPile() {
+        output = "";
         playerPointsPileHands = new ArrayList<>();
         for (int x = 0; x < numberOfPlayers; x++) playerPointsPileHands.add(new Hand());
         while(players[0].getNumberOfCards() != 0){
@@ -64,9 +66,7 @@ public class War {
             int winnerIndex = getRoundWinner(currentRoundHand);
             if (winnerIndex == -1) simulateWar(currentRoundHand, 2);
             else {
-                output = output + playerPointsPileHands.get(winnerIndex).getNumberOfCards() + "\n";
                 giveWinnerToPointsPile(playerPointsPileHands.get(winnerIndex),currentRoundHand);
-                output = output + playerPointsPileHands.get(winnerIndex).getNumberOfCards() + "\n";
                 output = output + playerNames[winnerIndex] + " wins the round!" + "\n";
             }
         }
