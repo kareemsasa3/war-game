@@ -3,6 +3,7 @@ package game;
 
 /**
  * @author Kareem Sasa
+ * @author Tiffany Tabourne
  * UTSA CS 4773 - Assignment 2
  * Fall 2020
 */
@@ -17,7 +18,6 @@ public enum Rank {
     private int value;
     private String string;
 
-    /* constructor */
     private Rank(int value, String string) {
         this.setValue(value);
         this.setString(string);

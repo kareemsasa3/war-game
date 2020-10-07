@@ -3,6 +3,7 @@ package game;
 
 /**
  * @author Kareem Sasa
+ * @author Tiffany Tabourne
  * UTSA CS 4773 - Assignment 2
  * Fall 2020
 */
@@ -12,7 +13,6 @@ public class Card {
     private Suit suit;
     public boolean isFaceUp;
 
-    /* constructor */
     public Card(Rank rank, Suit suit) {
         this.setRank(rank);
         this.setSuit(suit);

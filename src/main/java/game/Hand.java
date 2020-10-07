@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 /**
  * @author Kareem Sasa
+ * @author Tiffany Tabourne
  * UTSA CS 4773 - Assignment 2
  * Fall 2020
 */
@@ -13,7 +14,6 @@ public class Hand {
     public ArrayList<Card> cards;
     public int numberOfCards;
 
-    /* constructor */
     public Hand() {
         this.setCards();
         this.setNumberOfCards();
@@ -34,8 +34,6 @@ public class Hand {
         return str;
     }
 
-    public void clear() { cards.clear(); }
-
     public void add(Card card) { cards.add(card); }
 
     /* accessors */
@@ -45,5 +43,5 @@ public class Hand {
     
     public ArrayList<Card> getCards() { return cards; }
 
-    public void setCards() { this.cards = new ArrayList<Card>(); }
+    public void setCards() { this.cards = new ArrayList<>(); }
 } //end class Hand

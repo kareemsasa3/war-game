@@ -1,9 +1,15 @@
+//War.java
 package game;
 
 import java.util.ArrayList;
-
 import static java.lang.System.*;
 
+/**
+ * @author Kareem Sasa
+ * @author Tiffany Tabourne
+ * UTSA CS 4773 - Assignment 2
+ * Fall 2020
+ */
 
 public class War {
     public static final int cardsInDeck = 52;
@@ -155,7 +161,6 @@ public class War {
         return winnerPile;
     }
 
-    // THIS FUNCTION NEEDS FIXING
     public void getWinnerSamePile() {
         int maxInd = -1;
         int maxVal = -1;
@@ -249,4 +254,4 @@ public class War {
     public void setPlayedCards() { playedCards = new Hand(); }
 
     public void setWar(boolean war) { this.war = war; }
-}
+} // end class War
