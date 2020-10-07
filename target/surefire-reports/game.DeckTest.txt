@@ -1,15 +1,123 @@
 -------------------------------------------------------------------------------
 Test set: game.DeckTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.019 sec <<< FAILURE!
-testPopulate(game.DeckTest)  Time elapsed: 0.016 sec  <<< ERROR!
-java.io.FileNotFoundException: expectedDeck.txt (No such file or directory)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:212)
-	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:154)
-	at java.base/java.util.Scanner.<init>(Scanner.java:639)
-	at game.DeckTest.setUp(DeckTest.java:20)
-	at junit.framework.TestCase.runBare(TestCase.java:139)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.083 sec <<< FAILURE!
+testPopulate(game.DeckTest)  Time elapsed: 0.072 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<ACE of HEARTS
+[ACE of SPADES
+ACE of DIAMONDS
+ACE of CLUBS
+TWO of HEARTS
+TWO of SPADES
+TWO of DIAMONDS
+TWO of CLUBS
+THREE of HEARTS
+THREE of SPADES
+THREE of DIAMONDS
+THREE of CLUBS
+FOUR of HEARTS
+FOUR of SPADES
+FOUR of DIAMONDS
+FOUR of CLUBS
+FIVE of HEARTS
+FIVE of SPADES
+FIVE of DIAMONDS
+FIVE of CLUBS
+SIX of HEARTS
+SIX of SPADES
+SIX of DIAMONDS
+SIX of CLUBS
+SEVEN of HEARTS
+SEVEN of SPADES
+SEVEN of DIAMONDS
+SEVEN of CLUBS
+EIGHT of HEARTS
+EIGHT of SPADES
+EIGHT of DIAMONDS
+EIGHT of CLUBS
+NINE of HEARTS
+NINE of SPADES
+NINE of DIAMONDS
+NINE of CLUBS
+TEN of HEARTS
+TEN of SPADES
+TEN of DIAMONDS
+TEN of CLUBS
+JACK of HEARTS
+JACK of SPADES
+JACK of DIAMONDS
+JACK of CLUBS
+QUEEN of HEARTS
+QUEEN of SPADES
+QUEEN of DIAMONDS
+QUEEN of CLUBS
+KING of HEARTS
+KING of SPADES
+KING of DIAMOND]S
+KING of CLUBS
+> but was:<ACE of HEARTS
+[TWO of HEARTS
+THREE of HEARTS
+FOUR of HEARTS
+FIVE of HEARTS
+SIX of HEARTS
+SEVEN of HEARTS
+EIGHT of HEARTS
+NINE of HEARTS
+TEN of HEARTS
+JACK of HEARTS
+QUEEN of HEARTS
+KING of HEARTS
+ACE of SPADES
+TWO of SPADES
+THREE of SPADES
+FOUR of SPADES
+FIVE of SPADES
+SIX of SPADES
+SEVEN of SPADES
+EIGHT of SPADES
+NINE of SPADES
+TEN of SPADES
+JACK of SPADES
+QUEEN of SPADES
+KING of SPADES
+ACE of DIAMONDS
+TWO of DIAMONDS
+THREE of DIAMONDS
+FOUR of DIAMONDS
+FIVE of DIAMONDS
+SIX of DIAMONDS
+SEVEN of DIAMONDS
+EIGHT of DIAMONDS
+NINE of DIAMONDS
+TEN of DIAMONDS
+JACK of DIAMONDS
+QUEEN of DIAMONDS
+KING of DIAMONDS
+ACE of CLUBS
+TWO of CLUBS
+THREE of CLUBS
+FOUR of CLUBS
+FIVE of CLUBS
+SIX of CLUBS
+SEVEN of CLUBS
+EIGHT of CLUBS
+NINE of CLUBS
+TEN of CLUBS
+JACK of CLUBS
+QUEEN of CLUB]S
+KING of CLUBS
+>
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at junit.framework.TestCase.assertEquals(TestCase.java:269)
+	at game.DeckTest.testPopulate(DeckTest.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
 	at junit.framework.TestResult$1.protect(TestResult.java:122)
 	at junit.framework.TestResult.runProtected(TestResult.java:142)
 	at junit.framework.TestResult.run(TestResult.java:125)
@@ -23,7 +131,7 @@ java.io.FileNotFoundException: expectedDeck.txt (No such file or directory)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
 	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
